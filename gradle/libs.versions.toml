@@ -1,0 +1,11 @@
+[versions]
+kotlin = "2.2.0"
+agp = "8.12.1"
+
+[libraries]
+android-gradlePlugin = { module = "com.android.tools.build:gradle", version.ref = "agp" }
+kotlin-gradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+
+[plugins]
+com-kenkoro-android-application = { id = "com.kenkoro.android.application" }
+com-kenkoro-android-application-flavors = { id = "com.kenkoro.android.application.flavors" }

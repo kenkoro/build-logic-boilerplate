@@ -20,6 +20,10 @@ internal fun Project.configureKotlinAndroid(extension: ApplicationExtension) {
             sourceCompatibility = JavaVersion.VERSION_11
             targetCompatibility = JavaVersion.VERSION_11
         }
+        buildFeatures {
+            buildConfig = true
+            viewBinding = true
+        }
     }
     configureKotlin<KotlinAndroidProjectExtension>()
 }

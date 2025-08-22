@@ -5,6 +5,7 @@ plugins {
 dependencies {
     compileOnly(libs.android.gradlePlugin)
     compileOnly(libs.kotlin.gradlePlugin)
+    compileOnly(libs.spotless.gradlePlugin)
 }
 
 gradlePlugin {
@@ -16,6 +17,10 @@ gradlePlugin {
         register("androidFlavors") {
             id = libs.plugins.com.kenkoro.android.application.flavors.get().pluginId
             implementationClass = "AndroidApplicationFlavorsConventionPlugin"
+        }
+        register("androidFormatting") {
+            id = libs.plugins.com.kenkoro.android.application.formatting.get().pluginId
+            implementationClass = "AndroidApplicationFormattingConventionPlugin"
         }
     }
 }
